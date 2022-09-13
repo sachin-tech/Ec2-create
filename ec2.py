@@ -1,5 +1,5 @@
 import boto3
-conn = boto3.client('conn', 
+conn = boto3.client('ec2', 
                     'us-east-1',
                      aws_access_key_id='AKIA4RH4TEY6T7H65CPW',
                      aws_secret_access_key='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')
