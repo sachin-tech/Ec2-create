@@ -8,7 +8,7 @@ pipeline {
     }
     stage('hello') {
       steps {
-        withAWS([credentials:'aws_credentials']){
+        withAWS(region:AWS_REGION, credentials:'aws_credentials'){
         sh 'python3 ec2.py'
         }
       }
