@@ -12,5 +12,16 @@ instances = ec2.create_instances(
         MaxCount=1,
         InstanceType="t2.micro",
         SubnetId="subnet-02b013f38ce974e5c",
-        KeyName="dockr_key"
-    )
+        KeyName="dockr_key",
+       TagSpecifications=[
+        {
+            'ResourceType': 'instance',
+            'Tags': [
+                {
+                    'Key': 'Name',
+                    'Value': 'Jenkins_Built_instance'
+                },
+            ]
+        },
+    ]
+)
