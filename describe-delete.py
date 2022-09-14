@@ -1,4 +1,4 @@
 import boto3
 ec2 = boto3.resource('ec2', 'us-east-1')
-myinstance = ec2-describe.instances(Filters=[{'Name': 'Name', 'Values': ['Jenkins_Built_instance']}])
+myinstance = ec2-describe.instances
 print(myinstance)
