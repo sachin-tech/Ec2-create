@@ -3,7 +3,7 @@ import boto3
 #myinstance = ec2.describe_instances()
 ec2 = boto3.resource('ec2')
 instancename = ''
-for tags in ec2.instance.tags:
+for tags in ec2.instances.tags:
    if tags[“Key”] == ‘Name’:
       instancename = tags[“Value”]
       print(instancename)
