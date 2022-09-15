@@ -6,6 +6,6 @@ instances = ec2.instances.filter(Filters=[{'Name': 'Name', 'Values': ['Jenkins_B
 for instance in instances:
    if instance.tags != None:
       for tags in instance.tags:
-        if tags["Key"] == 'Name'
+        if tags["Key"] == 'Name':
           instancename = tags["Value"]
           print("Inastance Name - %s,  Instance Id - %s, Owner - %s " %(instancename,instance.id,owner))
