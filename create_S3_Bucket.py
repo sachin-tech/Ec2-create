@@ -5,5 +5,5 @@ location = {'LocationConstraint'}
 bucket = resource.create_bucket(
   Bucket=bucket_name,
   ACL='private')
-bucket_tagging = resource.BucketTagging(bucket)
+bucket_tagging = resource.BucketTagging(bucket_name)
 Set_Tag = bucket_tagging.put(Tagging={'TagSet':[{'Key':'Owner', 'Value': 'SB'}]})
