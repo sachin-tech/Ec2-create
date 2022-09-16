@@ -1,6 +1,7 @@
 import boto3
 from botocore.exceptions import ClientError
-#ec2 = boto3.client('ec2')
+AWS_REGION = 'us-east-1'
+vpc_resource = boto3.resource("ec2", region_name=AWS_REGION)
 response = boto3.describe_vpcs()
 vpc_id = response.get('Vpcs', [{}])[0].get('VpcId', '')
 try:
