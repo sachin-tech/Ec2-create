@@ -9,7 +9,7 @@ pipeline {
     stage('hello') {
       steps {
         withAWS(credentials:'aws_creds'){
-        sh 'python3 create_S3_Bucket.py'
+        sh 'python3 python_sg.py'
         }
       }
     }
