@@ -1,6 +1,6 @@
 import boto3
 resource = boto3.resource("s3")
-bucket_name = "python_created_bucket"
+bucket_name = "python-bucket"
 location = {'LocationConstraint'}
 bucket = resource.create_bucket(
   Bucket=bucket_name,
