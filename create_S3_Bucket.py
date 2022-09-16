@@ -1,8 +1,7 @@
 import boto3
-AWS_REGION = "us-east-1"
-resource = boto3.resource("s3", region_name=AWS_REGION)
+resource = boto3.resource("s3"))
 bucket_name = "python_created_bucket"
-location = {'LocationConstraint': AWS_REGION}
+location = {'LocationConstraint'}
 bucket = resource.create_bucket(
   Bucket=bucket_name,
   ACL='private')
