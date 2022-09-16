@@ -12,6 +12,4 @@ s3 = boto3.client("s3")
 response = s3.list_buckets()['Buckets']
 for bucket in response:
   out = print('Bucket name: {}, Created on: {}'.format(bucket['Name'], bucket['CreationDate']))
-with open("randomfile.txt", "a") as o:
-  o.write('out')
-  o.close()
+  print(out)
