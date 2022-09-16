@@ -2,7 +2,7 @@ import boto3
 from botocore.exceptions import ClientError
 ec2 = boto3.client('ec2')
 response = boto3.describe_vpcs()
-vpc_id = response.get('Vpcs', [{}][0].get('VpcId', '')
+vpc_id = response.get('Vpcs', [{}])[0].get('VpcId', '')
 try:
       response = ec2.create_securitygroup(GroupName='python_sg' Description='created using python', VpcId=vpc_id)
       security_group_id = response['GroupId']
