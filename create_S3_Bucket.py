@@ -8,7 +8,7 @@ bucket = resource.create_bucket(
 bucket_tagging = resource.BucketTagging(bucket_name)
 Set_Tag = bucket_tagging.put(Tagging={'TagSet':[{'Key':'Owner', 'Value': 'SB'}]})
 
-response = boto3.client("s3")
+s3 = boto3.client("s3")
 response = s3.list_buckets()['Buckets']
 for bucket in response:
   print('Bucket name: {}, Created on: {}'.format(bucket['Name'], bucket['CreationDate']))
