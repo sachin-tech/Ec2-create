@@ -1,6 +1,6 @@
 import boto3
 from botocore.exceptions import ClientError
-ec2 = boto3.client('ec2')
+#ec2 = boto3.client('ec2')
 response = boto3.describe_vpcs()
 vpc_id = response.get('Vpcs', [{}])[0].get('VpcId', '')
 try:
