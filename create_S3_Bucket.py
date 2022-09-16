@@ -1,3 +1,4 @@
+#This code is to create s3 and list
 import boto3
 resource = boto3.resource("s3")
 bucket_name = "python-sbhing-bucket"
