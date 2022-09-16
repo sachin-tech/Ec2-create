@@ -6,4 +6,4 @@ bucket = resource.create_bucket(
   Bucket=bucket_name,
   ACL='private')
 bucket_tagging = s3.BucketTagging(bucket)
-Set_Tag = bucket_tagging.put(Tagging={'TagSet':[{'Key':'Owner', 'Value': 'SB'}], [{'Key':'Env', 'Value': 'Prod'}]})
+Set_Tag = bucket_tagging.put(Tagging={'TagSet':[{'Key':'Owner', 'Value': 'SB'}]})
